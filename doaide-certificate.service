@@ -1,0 +1,15 @@
+[Unit]
+Description=DoAide Certificate Web
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/var/www/DoAide-Certificate
+ExecStart=/usr/bin/npx serve -s dist -l tcp://172.18.0.1:3053
+Restart=on-failure
+RestartSec=5
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target
