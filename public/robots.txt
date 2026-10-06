@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://certificate.doaide.com/sitemap.xml
