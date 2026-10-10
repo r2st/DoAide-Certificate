@@ -115,14 +115,26 @@ export default function BlogPost() {
 
   const articleJsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'BlogPosting',
     headline: post.title,
     description: post.description,
     datePublished: post.date,
+    dateModified: post.date,
     author: { '@type': 'Organization', name: 'DoAide', url: 'https://doaide.com' },
-    publisher: { '@type': 'Organization', name: 'DoAide', url: 'https://doaide.com' },
-    mainEntityOfPage: `https://certificate.doaide.com/blog/${post.slug}`,
+    publisher: { '@type': 'Organization', name: 'DoAide', url: 'https://doaide.com', logo: { '@type': 'ImageObject', url: 'https://certificate.doaide.com/favicon.svg' } },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://certificate.doaide.com/blog/${post.slug}` },
+    keywords: post.keywords,
   };
+
+  const faqJsonLd = post.faqs?.length ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: post.faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })),
+  } : null;
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -131,6 +143,12 @@ export default function BlogPost() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
 
       <section className="bg-gradient-to-br from-doaide-dark to-gray-900 text-white py-12">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
@@ -157,6 +175,20 @@ export default function BlogPost() {
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8">
             {renderMarkdown(post.content)}
           </div>
+
+          {post.faqs?.length > 0 && (
+            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8 mt-6">
+              <h2 className="text-xl font-bold font-playfair text-gray-800 mb-4">Frequently Asked Questions</h2>
+              <div className="space-y-4">
+                {post.faqs.map((faq, idx) => (
+                  <details key={idx} className="border border-gray-100 rounded-lg p-4 group">
+                    <summary className="font-semibold text-gray-800 cursor-pointer text-sm leading-relaxed">{faq.question}</summary>
+                    <p className="text-gray-600 text-sm leading-relaxed mt-2">{faq.answer}</p>
+                  </details>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div className="mt-8 text-center">
             <Link
