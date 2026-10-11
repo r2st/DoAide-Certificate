@@ -238,7 +238,7 @@ const CertificateRenderer = forwardRef(function CertificateRenderer(
         position: 'relative',
         overflow: 'hidden',
         backgroundColor: bg,
-        fontFamily: '"Montserrat", sans-serif',
+        fontFamily: '"Inter", sans-serif',
       }}
       ref={ref}
     >
@@ -459,7 +459,7 @@ const CertificateRenderer = forwardRef(function CertificateRenderer(
           color: tc,
           opacity: 0.3,
           margin: 0,
-          fontFamily: '"Montserrat", sans-serif',
+          fontFamily: '"Inter", sans-serif',
         }}
       >
         Generated with DoAide Certificate &mdash; cert.doaide.com

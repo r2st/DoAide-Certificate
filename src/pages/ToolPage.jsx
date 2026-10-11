@@ -24,7 +24,7 @@ export default function ToolPage() {
         <main className="flex-1 flex items-center justify-center py-16 px-4">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-gray-800 mb-4">Tool Not Found</h1>
-            <Link to="/" className="text-doaide-gold hover:underline">Back to Home</Link>
+            <Link to="/" className="text-da-teal hover:underline">Back to Home</Link>
           </div>
         </main>
         <Footer />
@@ -67,16 +67,16 @@ export default function ToolPage() {
       />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-doaide-dark to-gray-900 text-white py-12">
+      <section className="bg-gradient-to-br from-da-dark to-gray-900 text-white py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <nav className="text-sm text-gray-400 mb-4">
-            <Link to="/" className="hover:text-doaide-gold">Home</Link>
+            <Link to="/" className="hover:text-da-teal-light">Home</Link>
             <span className="mx-2">/</span>
             <span className="text-gray-300">Tools</span>
             <span className="mx-2">/</span>
-            <span className="text-doaide-gold">{tool.shortTitle}</span>
+            <span className="text-da-teal-light">{tool.shortTitle}</span>
           </nav>
-          <h1 className="text-2xl sm:text-4xl font-bold font-playfair leading-tight mb-3">
+          <h1 className="text-2xl sm:text-4xl font-bold font-inter leading-tight mb-3">
             {tool.title}
           </h1>
           <p className="text-gray-300 max-w-2xl mx-auto">
@@ -93,7 +93,7 @@ export default function ToolPage() {
       {/* FAQ */}
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl font-bold font-playfair text-gray-800 mb-8 text-center">
+          <h2 className="text-2xl font-bold font-inter text-gray-800 mb-8 text-center">
             Frequently Asked Questions
           </h2>
           <div className="space-y-6">

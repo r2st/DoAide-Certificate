@@ -2,9 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --da-teal: #0D9488;
+  --da-teal-dark: #0F766E;
+  --da-teal-light: #14B8A6;
+  --da-dark: #111827;
+  --da-dark-soft: #1F2937;
+  --da-bg: #f9fafb;
+}
+
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #f8f9fa;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--da-bg);
 }
 
 @layer utilities {

@@ -126,18 +126,18 @@ export default function ExperienceLetter() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-doaide-dark to-gray-900 text-white py-12">
+      <section className="bg-gradient-to-br from-da-dark to-gray-900 text-white py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <nav className="text-sm text-gray-400 mb-4">
-            <a href="/" className="hover:text-doaide-gold">Home</a>
+            <a href="/" className="hover:text-da-teal-light">Home</a>
             <span className="mx-2">/</span>
             <span className="text-gray-300">Tools</span>
             <span className="mx-2">/</span>
-            <span className="text-doaide-gold">Experience Letter Generator</span>
+            <span className="text-da-teal-light">Experience Letter Generator</span>
           </nav>
-          <h1 className="text-2xl sm:text-4xl font-bold font-playfair leading-tight mb-3">
+          <h1 className="text-2xl sm:text-4xl font-bold font-inter leading-tight mb-3">
             Free Experience Letter Generator
-            <span className="block text-lg sm:text-xl text-doaide-gold mt-1 font-montserrat font-normal">
+            <span className="block text-lg sm:text-xl text-da-teal-light mt-1 font-inter font-normal">
               AI-Powered
             </span>
           </h1>
@@ -155,7 +155,7 @@ export default function ExperienceLetter() {
             {/* Form */}
             <div className="lg:w-96 flex-shrink-0">
               <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 space-y-4">
-                <h2 className="font-semibold text-lg font-montserrat text-gray-800">
+                <h2 className="font-semibold text-lg font-inter text-gray-800">
                   Employee Details
                 </h2>
 
@@ -165,7 +165,7 @@ export default function ExperienceLetter() {
                     type="text"
                     value={form.employeeName}
                     onChange={update('employeeName')}
-                    className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-doaide-gold/50"
+                    className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-da-teal/50"
                     placeholder="e.g. Priya Sharma"
                   />
                 </div>
@@ -176,7 +176,7 @@ export default function ExperienceLetter() {
                     type="text"
                     value={form.designation}
                     onChange={update('designation')}
-                    className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-doaide-gold/50"
+                    className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-da-teal/50"
                     placeholder="e.g. Senior Software Engineer"
                   />
                 </div>
@@ -187,7 +187,7 @@ export default function ExperienceLetter() {
                     type="text"
                     value={form.companyName}
                     onChange={update('companyName')}
-                    className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-doaide-gold/50"
+                    className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-da-teal/50"
                     placeholder="e.g. Acme Technologies Pvt. Ltd."
                   />
                 </div>
@@ -199,7 +199,7 @@ export default function ExperienceLetter() {
                       type="date"
                       value={form.joiningDate}
                       onChange={update('joiningDate')}
-                      className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-doaide-gold/50"
+                      className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-da-teal/50"
                     />
                   </div>
                   <div>
@@ -208,7 +208,7 @@ export default function ExperienceLetter() {
                       type="date"
                       value={form.leavingDate}
                       onChange={update('leavingDate')}
-                      className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-doaide-gold/50"
+                      className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-da-teal/50"
                     />
                   </div>
                 </div>
@@ -221,7 +221,7 @@ export default function ExperienceLetter() {
                     value={form.responsibilities}
                     onChange={update('responsibilities')}
                     rows={3}
-                    className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-doaide-gold/50 resize-none"
+                    className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-da-teal/50 resize-none"
                     placeholder="e.g. Led a team of 5 developers, managed cloud infrastructure, implemented CI/CD pipelines"
                   />
                 </div>
@@ -229,7 +229,7 @@ export default function ExperienceLetter() {
                 <button
                   onClick={handleGenerate}
                   disabled={!canGenerate || loading}
-                  className="w-full bg-doaide-gold text-doaide-dark px-4 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-da-teal text-white px-4 py-3 rounded-lg font-semibold hover:bg-da-teal-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {loading ? 'Generating with AI...' : 'Generate Experience Letter'}
                 </button>
@@ -256,7 +256,7 @@ export default function ExperienceLetter() {
                         </button>
                         <button
                           onClick={handleDownloadPDF}
-                          className="px-3 py-1.5 text-sm bg-doaide-dark text-white rounded-lg hover:bg-gray-800 transition-colors"
+                          className="px-3 py-1.5 text-sm bg-da-dark text-white rounded-lg hover:bg-gray-800 transition-colors"
                         >
                           Download PDF
                         </button>
@@ -291,7 +291,7 @@ export default function ExperienceLetter() {
       {/* FAQ */}
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl font-bold font-playfair text-gray-800 mb-8 text-center">
+          <h2 className="text-2xl font-bold font-inter text-gray-800 mb-8 text-center">
             Frequently Asked Questions
           </h2>
           <div className="space-y-6">

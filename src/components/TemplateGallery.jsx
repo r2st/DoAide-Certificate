@@ -18,7 +18,7 @@ export default function TemplateGallery() {
             onClick={() => setActive(cat)}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
               active === cat
-                ? 'bg-doaide-dark text-doaide-gold shadow-md'
+                ? 'bg-da-teal text-white shadow-md'
                 : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
             }`}
           >
@@ -50,7 +50,7 @@ export default function TemplateGallery() {
               >
                 <p
                   style={{
-                    fontFamily: '"Playfair Display", serif',
+                    fontFamily: '"Inter", sans-serif',
                     fontSize: 10,
                     letterSpacing: '0.15em',
                     color: t.colors.primary,
@@ -63,7 +63,7 @@ export default function TemplateGallery() {
                 {t.titleLine2 && (
                   <p
                     style={{
-                      fontFamily: '"Playfair Display", serif',
+                      fontFamily: '"Inter", sans-serif',
                       fontSize: 7,
                       letterSpacing: '0.1em',
                       color: t.colors.primary,
@@ -103,7 +103,7 @@ export default function TemplateGallery() {
 
               {/* Hover overlay */}
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all flex items-center justify-center">
-                <span className="opacity-0 group-hover:opacity-100 bg-white text-doaide-dark px-4 py-2 rounded-lg font-semibold text-sm shadow-lg transition-opacity">
+                <span className="opacity-0 group-hover:opacity-100 bg-white text-da-dark px-4 py-2 rounded-lg font-semibold text-sm shadow-lg transition-opacity">
                   Use Template
                 </span>
               </div>

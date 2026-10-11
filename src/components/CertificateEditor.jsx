@@ -106,7 +106,7 @@ export default function CertificateEditor({ templateId }) {
         {/* Editor panel */}
         <div className="lg:w-96 flex-shrink-0">
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 space-y-4">
-            <h2 className="font-semibold text-lg font-montserrat text-gray-800">Customize Certificate</h2>
+            <h2 className="font-semibold text-lg font-inter text-gray-800">Customize Certificate</h2>
 
             {/* Template selector */}
             <div>
@@ -114,7 +114,7 @@ export default function CertificateEditor({ templateId }) {
               <select
                 value={currentTemplateId}
                 onChange={(e) => setCurrentTemplateId(e.target.value)}
-                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-doaide-gold/50"
+                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-da-teal/50"
               >
                 {templates.map((t) => (
                   <option key={t.id} value={t.id}>
@@ -130,7 +130,7 @@ export default function CertificateEditor({ templateId }) {
                 type="text"
                 value={recipientName}
                 onChange={(e) => setRecipientName(e.target.value)}
-                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-doaide-gold/50"
+                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-da-teal/50"
                 placeholder="Enter recipient name"
               />
             </div>
@@ -141,7 +141,7 @@ export default function CertificateEditor({ templateId }) {
                 type="text"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-doaide-gold/50"
+                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-da-teal/50"
                 placeholder="e.g. Web Development Course"
               />
             </div>
@@ -152,7 +152,7 @@ export default function CertificateEditor({ templateId }) {
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 rows={2}
-                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-doaide-gold/50 resize-none"
+                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-da-teal/50 resize-none"
                 placeholder="Certificate description text"
               />
             </div>
@@ -163,7 +163,7 @@ export default function CertificateEditor({ templateId }) {
                 type="text"
                 value={organization}
                 onChange={(e) => setOrganization(e.target.value)}
-                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-doaide-gold/50"
+                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-da-teal/50"
               />
             </div>
 
@@ -174,7 +174,7 @@ export default function CertificateEditor({ templateId }) {
                   type="date"
                   value={date}
                   onChange={(e) => setDate(e.target.value)}
-                  className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-doaide-gold/50"
+                  className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-da-teal/50"
                 />
               </div>
               <div>
@@ -197,14 +197,14 @@ export default function CertificateEditor({ templateId }) {
                 type="text"
                 value={signatureName}
                 onChange={(e) => setSignatureName(e.target.value)}
-                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-doaide-gold/50"
+                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-da-teal/50"
               />
             </div>
 
             <div className="grid grid-cols-2 gap-3">
               <div>
                 <label className="block text-xs font-medium text-gray-500 mb-1">Signature Image</label>
-                <label className="block border border-dashed border-gray-300 rounded-lg p-2 text-center cursor-pointer hover:border-doaide-gold transition-colors">
+                <label className="block border border-dashed border-gray-300 rounded-lg p-2 text-center cursor-pointer hover:border-da-teal transition-colors">
                   <span className="text-xs text-gray-400">{signatureImage ? 'Change' : 'Upload'}</span>
                   <input
                     type="file"
@@ -216,7 +216,7 @@ export default function CertificateEditor({ templateId }) {
               </div>
               <div>
                 <label className="block text-xs font-medium text-gray-500 mb-1">Organization Logo</label>
-                <label className="block border border-dashed border-gray-300 rounded-lg p-2 text-center cursor-pointer hover:border-doaide-gold transition-colors">
+                <label className="block border border-dashed border-gray-300 rounded-lg p-2 text-center cursor-pointer hover:border-da-teal transition-colors">
                   <span className="text-xs text-gray-400">{logoImage ? 'Change' : 'Upload'}</span>
                   <input
                     type="file"
@@ -233,7 +233,7 @@ export default function CertificateEditor({ templateId }) {
                 type="checkbox"
                 checked={showQR}
                 onChange={(e) => setShowQR(e.target.checked)}
-                className="rounded border-gray-300 text-doaide-gold focus:ring-doaide-gold"
+                className="rounded border-gray-300 text-da-teal focus:ring-da-teal"
               />
               <span className="text-sm text-gray-600">Add QR verification code</span>
             </label>
@@ -246,21 +246,21 @@ export default function CertificateEditor({ templateId }) {
                 <button
                   onClick={handleExportPNG}
                   disabled={exporting}
-                  className="bg-doaide-dark text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-gray-800 transition-colors disabled:opacity-50"
+                  className="bg-da-dark text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-gray-800 transition-colors disabled:opacity-50"
                 >
                   {exporting ? 'Exporting...' : 'Download PNG'}
                 </button>
                 <button
                   onClick={handleExportPDF}
                   disabled={exporting}
-                  className="bg-doaide-dark text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-gray-800 transition-colors disabled:opacity-50"
+                  className="bg-da-dark text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-gray-800 transition-colors disabled:opacity-50"
                 >
                   {exporting ? 'Exporting...' : 'Download PDF'}
                 </button>
               </div>
               <button
                 onClick={() => setIsShareOpen(true)}
-                className="w-full bg-doaide-gold text-doaide-dark px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-yellow-400 transition-colors"
+                className="w-full bg-da-teal text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-da-teal-dark transition-colors"
               >
                 Share Certificate
               </button>

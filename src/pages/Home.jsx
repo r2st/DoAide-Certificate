@@ -56,25 +56,25 @@ const freeTools = [
     title: 'Certificate of Appreciation',
     desc: 'Recognize contributions with elegant appreciation certificates',
     link: '/tools/certificate-of-appreciation',
-    color: 'bg-green-50 text-green-600',
+    color: 'bg-teal-50 text-teal-600',
   },
   {
     title: 'Course Completion Certificate',
     desc: 'Issue certificates for courses, training programs, and workshops',
     link: '/tools/course-completion-certificate',
-    color: 'bg-red-50 text-red-600',
+    color: 'bg-emerald-50 text-emerald-600',
   },
   {
     title: 'Award Certificate',
     desc: 'Create stunning certificates for achievements and competitions',
     link: '/tools/award-certificate',
-    color: 'bg-purple-50 text-purple-600',
+    color: 'bg-cyan-50 text-cyan-600',
   },
   {
     title: 'Experience Letter Generator',
     desc: 'AI-powered experience letter and employment certificate creator',
     link: '/tools/experience-letter-generator',
-    color: 'bg-blue-50 text-blue-600',
+    color: 'bg-sky-50 text-sky-600',
     badge: 'AI',
   },
 ];
@@ -85,20 +85,20 @@ export default function Home() {
       <Header />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-doaide-dark to-gray-900 text-white py-16 sm:py-24">
+      <section className="bg-gradient-to-br from-da-dark to-gray-900 text-white py-16 sm:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-3xl sm:text-5xl font-bold font-playfair leading-tight mb-4">
+          <h1 className="text-3xl sm:text-5xl font-bold font-inter leading-tight mb-4">
             Create Beautiful Certificates
-            <span className="block text-doaide-gold mt-1">— Free, No Login</span>
+            <span className="block text-da-teal-light mt-1">— Free, No Login</span>
           </h1>
-          <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto font-montserrat">
+          <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto font-inter">
             Design professional certificates, awards, and experience letters for your school, company, or
             event. Download instantly as PDF or PNG.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               to="/editor/completion"
-              className="bg-doaide-gold text-doaide-dark px-8 py-3.5 rounded-xl font-semibold text-lg hover:bg-yellow-400 transition-colors shadow-lg shadow-yellow-900/20"
+              className="bg-da-teal text-white px-8 py-3.5 rounded-xl font-semibold text-lg hover:bg-da-teal-dark transition-colors shadow-lg shadow-teal-900/20"
             >
               Start Creating
             </Link>
@@ -118,7 +118,7 @@ export default function Home() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((f, i) => (
               <div key={i} className="text-center p-4">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-yellow-50 text-doaide-gold mb-3">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-teal-50 text-da-teal mb-3">
                   {f.icon}
                 </div>
                 <h3 className="font-semibold text-gray-800 mb-1">{f.title}</h3>
@@ -132,7 +132,7 @@ export default function Home() {
       {/* Free Tools */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl sm:text-3xl font-bold font-playfair text-center text-gray-800 mb-2">
+          <h2 className="text-2xl sm:text-3xl font-bold font-inter text-center text-gray-800 mb-2">
             Free Certificate Tools
           </h2>
           <p className="text-center text-gray-500 mb-10">
@@ -150,10 +150,10 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
                   </svg>
                 </div>
-                <h3 className="font-semibold text-gray-800 text-sm mb-1 group-hover:text-doaide-gold transition-colors">
+                <h3 className="font-semibold text-gray-800 text-sm mb-1 group-hover:text-da-teal transition-colors">
                   {tool.title}
                   {tool.badge && (
-                    <span className="ml-1.5 text-xs bg-doaide-gold/20 text-doaide-gold px-1.5 py-0.5 rounded-full font-semibold">
+                    <span className="ml-1.5 text-xs bg-da-teal/20 text-da-teal px-1.5 py-0.5 rounded-full font-semibold">
                       {tool.badge}
                     </span>
                   )}
@@ -168,7 +168,7 @@ export default function Home() {
       {/* Templates */}
       <section id="templates" className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl sm:text-3xl font-bold font-playfair text-center text-gray-800 mb-2">
+          <h2 className="text-2xl sm:text-3xl font-bold font-inter text-center text-gray-800 mb-2">
             Certificate Templates
           </h2>
           <p className="text-center text-gray-500 mb-10">
@@ -181,13 +181,13 @@ export default function Home() {
       {/* How it works */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl sm:text-3xl font-bold font-playfair text-center text-gray-800 mb-10">
+          <h2 className="text-2xl sm:text-3xl font-bold font-inter text-center text-gray-800 mb-10">
             How It Works
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {steps.map((s) => (
               <div key={s.num} className="text-center">
-                <div className="w-12 h-12 rounded-full bg-doaide-dark text-doaide-gold font-bold text-xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 rounded-full bg-da-teal text-white font-bold text-xl flex items-center justify-center mx-auto mb-4">
                   {s.num}
                 </div>
                 <h3 className="font-semibold text-gray-800 mb-2">{s.title}</h3>
@@ -201,7 +201,7 @@ export default function Home() {
       {/* Blog */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl sm:text-3xl font-bold font-playfair text-center text-gray-800 mb-2">
+          <h2 className="text-2xl sm:text-3xl font-bold font-inter text-center text-gray-800 mb-2">
             From the Blog
           </h2>
           <p className="text-center text-gray-500 mb-8">
@@ -223,7 +223,7 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-6">
-            <Link to="/blog" className="text-sm font-medium text-doaide-gold hover:underline">
+            <Link to="/blog" className="text-sm font-medium text-da-teal hover:underline">
               View all posts &rarr;
             </Link>
           </div>
@@ -231,9 +231,9 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-gradient-to-br from-doaide-dark to-gray-900 text-white">
+      <section className="py-16 bg-gradient-to-br from-da-dark to-gray-900 text-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold font-playfair mb-4">
+          <h2 className="text-2xl sm:text-3xl font-bold font-inter mb-4">
             Ready to create your first certificate?
           </h2>
           <p className="text-gray-300 mb-8">
@@ -241,7 +241,7 @@ export default function Home() {
           </p>
           <Link
             to="/editor/custom"
-            className="inline-block bg-doaide-gold text-doaide-dark px-8 py-3.5 rounded-xl font-semibold text-lg hover:bg-yellow-400 transition-colors shadow-lg shadow-yellow-900/20"
+            className="inline-block bg-da-teal text-white px-8 py-3.5 rounded-xl font-semibold text-lg hover:bg-da-teal-dark transition-colors shadow-lg shadow-teal-900/20"
           >
             Create Free Certificate
           </Link>

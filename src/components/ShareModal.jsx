@@ -47,7 +47,7 @@ export default function ShareModal({ isOpen, onClose, certificateId, certificate
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between mb-6">
-          <h3 className="text-lg font-semibold font-montserrat">Share Certificate</h3>
+          <h3 className="text-lg font-semibold font-inter">Share Certificate</h3>
           <button onClick={onClose} className="text-gray-400 hover:text-gray-600 text-2xl leading-none">
             &times;
           </button>

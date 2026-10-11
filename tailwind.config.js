@@ -4,15 +4,17 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        playfair: ['"Playfair Display"', 'serif'],
+        inter: ['"Inter"', 'sans-serif'],
         'great-vibes': ['"Great Vibes"', 'cursive'],
-        montserrat: ['"Montserrat"', 'sans-serif'],
         dancing: ['"Dancing Script"', 'cursive'],
       },
       colors: {
-        doaide: {
-          gold: '#F0B429',
-          dark: '#1a1a2e',
+        da: {
+          teal: '#0D9488',
+          'teal-dark': '#0F766E',
+          'teal-light': '#14B8A6',
+          dark: '#111827',
+          'dark-soft': '#1F2937',
         },
       },
     },

@@ -82,7 +82,7 @@ export default function BulkGenerator({ isOpen, onClose, template, baseData }) {
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4" onClick={onClose}>
       <div className="bg-white rounded-2xl shadow-2xl max-w-lg w-full p-6" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-semibold font-montserrat">Bulk Generate Certificates</h3>
+          <h3 className="text-lg font-semibold font-inter">Bulk Generate Certificates</h3>
           <button onClick={onClose} className="text-gray-400 hover:text-gray-600 text-2xl leading-none">
             &times;
           </button>
@@ -97,7 +97,7 @@ export default function BulkGenerator({ isOpen, onClose, template, baseData }) {
           onDragLeave={() => setDragActive(false)}
           onDrop={handleDrop}
           className={`border-2 border-dashed rounded-xl p-8 text-center mb-4 transition-colors ${
-            dragActive ? 'border-doaide-gold bg-yellow-50' : 'border-gray-300'
+            dragActive ? 'border-da-teal bg-teal-50' : 'border-gray-300'
           }`}
         >
           <svg className="mx-auto w-10 h-10 text-gray-400 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
@@ -142,11 +142,11 @@ export default function BulkGenerator({ isOpen, onClose, template, baseData }) {
         <div className="flex items-center gap-4 mb-4">
           <span className="text-sm text-gray-600">Format:</span>
           <label className="flex items-center gap-1.5 cursor-pointer">
-            <input type="radio" value="png" checked={format === 'png'} onChange={() => setFormat('png')} className="text-doaide-gold focus:ring-doaide-gold" />
+            <input type="radio" value="png" checked={format === 'png'} onChange={() => setFormat('png')} className="text-da-teal focus:ring-da-teal" />
             <span className="text-sm">PNG</span>
           </label>
           <label className="flex items-center gap-1.5 cursor-pointer">
-            <input type="radio" value="pdf" checked={format === 'pdf'} onChange={() => setFormat('pdf')} className="text-doaide-gold focus:ring-doaide-gold" />
+            <input type="radio" value="pdf" checked={format === 'pdf'} onChange={() => setFormat('pdf')} className="text-da-teal focus:ring-da-teal" />
             <span className="text-sm">PDF</span>
           </label>
         </div>
@@ -160,7 +160,7 @@ export default function BulkGenerator({ isOpen, onClose, template, baseData }) {
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
               <div
-                className="bg-doaide-gold rounded-full h-2 transition-all"
+                className="bg-da-teal rounded-full h-2 transition-all"
                 style={{ width: `${progress}%` }}
               />
             </div>
@@ -171,7 +171,7 @@ export default function BulkGenerator({ isOpen, onClose, template, baseData }) {
         <button
           onClick={handleGenerate}
           disabled={names.length === 0 || isGenerating}
-          className="w-full bg-doaide-gold text-doaide-dark px-4 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full bg-da-teal text-white px-4 py-3 rounded-lg font-semibold hover:bg-da-teal-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isGenerating ? 'Generating...' : `Generate ${names.length} Certificates`}
         </button>

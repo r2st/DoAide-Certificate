@@ -11,7 +11,7 @@ function renderMarkdown(content) {
     .map((block, i) => {
       if (block.startsWith('## ')) {
         return (
-          <h2 key={i} className="text-xl font-bold font-playfair text-gray-800 mt-8 mb-3">
+          <h2 key={i} className="text-xl font-bold font-inter text-gray-800 mt-8 mb-3">
             {block.replace('## ', '')}
           </h2>
         );
@@ -105,7 +105,7 @@ export default function BlogPost() {
         <main className="flex-1 flex items-center justify-center py-16 px-4">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-gray-800 mb-4">Post Not Found</h1>
-            <Link to="/blog" className="text-doaide-gold hover:underline">Back to Blog</Link>
+            <Link to="/blog" className="text-da-teal hover:underline">Back to Blog</Link>
           </div>
         </main>
         <Footer />
@@ -150,16 +150,16 @@ export default function BlogPost() {
         />
       )}
 
-      <section className="bg-gradient-to-br from-doaide-dark to-gray-900 text-white py-12">
+      <section className="bg-gradient-to-br from-da-dark to-gray-900 text-white py-12">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <nav className="text-sm text-gray-400 mb-4">
-            <Link to="/" className="hover:text-doaide-gold">Home</Link>
+            <Link to="/" className="hover:text-da-teal-light">Home</Link>
             <span className="mx-2">/</span>
-            <Link to="/blog" className="hover:text-doaide-gold">Blog</Link>
+            <Link to="/blog" className="hover:text-da-teal-light">Blog</Link>
             <span className="mx-2">/</span>
             <span className="text-gray-300">Article</span>
           </nav>
-          <h1 className="text-2xl sm:text-3xl font-bold font-playfair leading-tight mb-3">
+          <h1 className="text-2xl sm:text-3xl font-bold font-inter leading-tight mb-3">
             {post.title}
           </h1>
           <div className="flex items-center gap-3 text-sm text-gray-400">
@@ -178,7 +178,7 @@ export default function BlogPost() {
 
           {post.faqs?.length > 0 && (
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8 mt-6">
-              <h2 className="text-xl font-bold font-playfair text-gray-800 mb-4">Frequently Asked Questions</h2>
+              <h2 className="text-xl font-bold font-inter text-gray-800 mb-4">Frequently Asked Questions</h2>
               <div className="space-y-4">
                 {post.faqs.map((faq, idx) => (
                   <details key={idx} className="border border-gray-100 rounded-lg p-4 group">
@@ -193,7 +193,7 @@ export default function BlogPost() {
           <div className="mt-8 text-center">
             <Link
               to="/editor/custom"
-              className="inline-block bg-doaide-gold text-doaide-dark px-8 py-3 rounded-xl font-semibold hover:bg-yellow-400 transition-colors shadow-lg shadow-yellow-900/20"
+              className="inline-block bg-da-teal text-white px-8 py-3 rounded-xl font-semibold hover:bg-da-teal-dark transition-colors shadow-lg shadow-teal-900/20"
             >
               Create Your Certificate Now
             </Link>

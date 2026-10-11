@@ -15,7 +15,7 @@ export default function Verify() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
-          <h1 className="text-xl font-bold font-playfair text-gray-800 mb-2">Certificate Verification</h1>
+          <h1 className="text-xl font-bold font-inter text-gray-800 mb-2">Certificate Verification</h1>
           <p className="text-gray-500 text-sm mb-6">
             This certificate was generated using DoAide Certificate
           </p>
@@ -28,7 +28,7 @@ export default function Verify() {
           </p>
           <Link
             to="/"
-            className="inline-block bg-doaide-gold text-doaide-dark px-6 py-2.5 rounded-lg font-semibold text-sm hover:bg-yellow-400 transition-colors"
+            className="inline-block bg-da-teal text-white px-6 py-2.5 rounded-lg font-semibold text-sm hover:bg-da-teal-dark transition-colors"
           >
             Create Your Own Certificate
           </Link>

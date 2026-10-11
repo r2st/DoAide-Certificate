@@ -20,9 +20,9 @@ export default function Blog() {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      <section className="bg-gradient-to-br from-doaide-dark to-gray-900 text-white py-12">
+      <section className="bg-gradient-to-br from-da-dark to-gray-900 text-white py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-2xl sm:text-4xl font-bold font-playfair mb-3">Blog</h1>
+          <h1 className="text-2xl sm:text-4xl font-bold font-inter mb-3">Blog</h1>
           <p className="text-gray-300">
             Guides, tips, and best practices for creating professional certificates and documents
           </p>
@@ -43,11 +43,11 @@ export default function Blog() {
                   <span className="w-1 h-1 bg-gray-300 rounded-full" />
                   <span>{post.author}</span>
                 </div>
-                <h2 className="text-lg font-semibold font-playfair text-gray-800 mb-2 group-hover:text-doaide-gold transition-colors">
+                <h2 className="text-lg font-semibold font-inter text-gray-800 mb-2 group-hover:text-da-teal transition-colors">
                   {post.title}
                 </h2>
                 <p className="text-sm text-gray-500 leading-relaxed">{post.description}</p>
-                <span className="inline-block mt-3 text-sm font-medium text-doaide-gold">
+                <span className="inline-block mt-3 text-sm font-medium text-da-teal">
                   Read more &rarr;
                 </span>
               </Link>
