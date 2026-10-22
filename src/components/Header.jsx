@@ -64,16 +64,16 @@ export default function Header() {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden border-t border-gray-700 px-4 py-3 space-y-2 text-sm font-inter">
-          <Link to="/" onClick={() => setMenuOpen(false)} className="block py-2 hover:text-da-teal-light">Templates</Link>
-          <Link to="/tools/certificate-of-appreciation" onClick={() => setMenuOpen(false)} className="block py-2 hover:text-da-teal-light">Certificate of Appreciation</Link>
-          <Link to="/tools/course-completion-certificate" onClick={() => setMenuOpen(false)} className="block py-2 hover:text-da-teal-light">Course Completion Certificate</Link>
-          <Link to="/tools/award-certificate" onClick={() => setMenuOpen(false)} className="block py-2 hover:text-da-teal-light">Award Certificate</Link>
-          <Link to="/tools/experience-letter-generator" onClick={() => setMenuOpen(false)} className="block py-2 hover:text-da-teal-light">Experience Letter (AI)</Link>
-          <Link to="/blog" onClick={() => setMenuOpen(false)} className="block py-2 hover:text-da-teal-light">Blog</Link>
+          <Link to="/" onClick={() => setMenuOpen(false)} className="flex items-center min-h-[48px] py-2 hover:text-da-teal-light">Templates</Link>
+          <Link to="/tools/certificate-of-appreciation" onClick={() => setMenuOpen(false)} className="flex items-center min-h-[48px] py-2 hover:text-da-teal-light">Certificate of Appreciation</Link>
+          <Link to="/tools/course-completion-certificate" onClick={() => setMenuOpen(false)} className="flex items-center min-h-[48px] py-2 hover:text-da-teal-light">Course Completion Certificate</Link>
+          <Link to="/tools/award-certificate" onClick={() => setMenuOpen(false)} className="flex items-center min-h-[48px] py-2 hover:text-da-teal-light">Award Certificate</Link>
+          <Link to="/tools/experience-letter-generator" onClick={() => setMenuOpen(false)} className="flex items-center min-h-[48px] py-2 hover:text-da-teal-light">Experience Letter (AI)</Link>
+          <Link to="/blog" onClick={() => setMenuOpen(false)} className="flex items-center min-h-[48px] py-2 hover:text-da-teal-light">Blog</Link>
           <Link
             to="/editor/custom"
             onClick={() => setMenuOpen(false)}
-            className="block bg-da-teal text-white px-4 py-2 rounded-lg font-semibold text-center mt-2"
+            className="flex items-center justify-center min-h-[48px] bg-da-teal text-white px-4 py-2 rounded-lg font-semibold text-center mt-2"
           >
             Create Certificate
           </Link>
