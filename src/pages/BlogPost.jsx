@@ -1,8 +1,8 @@
 import { useParams, Link } from 'react-router-dom';
-import { useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { getBlogPost } from '../data/blogPosts';
+import useSEO from '../hooks/useSEO';
 import { formatDate } from '../utils/helpers';
 
 function renderMarkdown(content) {
@@ -90,13 +90,7 @@ export default function BlogPost() {
   const { slug } = useParams();
   const post = getBlogPost(slug);
 
-  useEffect(() => {
-    if (post) {
-      document.title = `${post.title} | DoAide Certificate Blog`;
-      const meta = document.querySelector('meta[name="description"]');
-      if (meta) meta.setAttribute('content', post.description);
-    }
-  }, [post]);
+  useSEO(`/blog/${slug}`);
 
   if (!post) {
     return (
@@ -113,42 +107,9 @@ export default function BlogPost() {
     );
   }
 
-  const articleJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: post.title,
-    description: post.description,
-    datePublished: post.date,
-    dateModified: post.date,
-    author: { '@type': 'Organization', name: 'DoAide', url: 'https://doaide.com' },
-    publisher: { '@type': 'Organization', name: 'DoAide', url: 'https://doaide.com', logo: { '@type': 'ImageObject', url: 'https://certificate.doaide.com/favicon.svg' } },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://certificate.doaide.com/blog/${post.slug}` },
-    keywords: post.keywords,
-  };
-
-  const faqJsonLd = post.faqs?.length ? {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: post.faqs.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-    })),
-  } : null;
-
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
-      />
-      {faqJsonLd && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-        />
-      )}
 
       <section className="bg-gradient-to-br from-da-dark to-gray-900 text-white py-12">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">

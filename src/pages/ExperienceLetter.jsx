@@ -1,7 +1,8 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { generateExperienceLetter } from '../utils/gemini';
+import useSEO from '../hooks/useSEO';
 import { jsPDF } from 'jspdf';
 
 export default function ExperienceLetter() {
@@ -19,15 +20,7 @@ export default function ExperienceLetter() {
   const [copied, setCopied] = useState(false);
   const letterRef = useRef(null);
 
-  useEffect(() => {
-    document.title = 'Free Experience Letter Generator (AI-Powered) | DoAide Certificate';
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta)
-      meta.setAttribute(
-        'content',
-        'Generate professional experience letters instantly with AI. Enter employee details and get a ready-to-use experience certificate. Free, no login required.'
-      );
-  }, []);
+  useSEO('/tools/experience-letter-generator');
 
   const update = (field) => (e) => setForm((f) => ({ ...f, [field]: e.target.value }));
 
@@ -75,55 +68,9 @@ export default function ExperienceLetter() {
     pdf.save(`experience-letter-${safeName}.pdf`);
   };
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'WebApplication',
-    name: 'Experience Letter Generator',
-    url: 'https://certificate.doaide.com/tools/experience-letter-generator',
-    description:
-      'Generate professional experience letters instantly with AI. Free, no login required.',
-    applicationCategory: 'BusinessApplication',
-    operatingSystem: 'Any',
-    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-    author: { '@type': 'Organization', name: 'DoAide', url: 'https://doaide.com' },
-  };
-
-  const faqJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What is an experience letter?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'An experience letter is a formal document issued by an employer confirming an employee\'s tenure, designation, and responsibilities during their employment period.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How does the AI experience letter generator work?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Enter the employee details (name, designation, company, dates, responsibilities) and our AI generates a professionally worded experience letter that you can download as PDF or copy.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Is my data safe?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes. All processing happens in your browser. We do not store any of the information you enter. The AI generates the letter on-the-fly and nothing is saved on our servers.',
-        },
-      },
-    ],
-  };
-
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* Hero */}
       <section className="bg-gradient-to-br from-da-dark to-gray-900 text-white py-12">

@@ -5,6 +5,7 @@ import TemplateGallery from '../components/TemplateGallery';
 import { tools } from '../data/toolsData';
 import { blogPosts } from '../data/blogPosts';
 import { formatDate } from '../utils/helpers';
+import useSEO from '../hooks/useSEO';
 
 const features = [
   {
@@ -80,6 +81,7 @@ const freeTools = [
 ];
 
 export default function Home() {
+  useSEO('/');
   return (
     <div className="min-h-screen flex flex-col">
       <Header />

@@ -1,20 +1,12 @@
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { blogPosts } from '../data/blogPosts';
 import { formatDate } from '../utils/helpers';
+import useSEO from '../hooks/useSEO';
 
 export default function Blog() {
-  useEffect(() => {
-    document.title = 'Blog — Certificate Design Tips & Guides | DoAide Certificate';
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta)
-      meta.setAttribute(
-        'content',
-        'Tips, guides, and best practices for creating professional certificates, awards, and experience letters. Free templates and tools.'
-      );
-  }, []);
+  useSEO('/blog');
 
   return (
     <div className="min-h-screen flex flex-col">

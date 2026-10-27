@@ -1,21 +1,15 @@
 import { useParams, Link } from 'react-router-dom';
-import { useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CertificateEditor from '../components/CertificateEditor';
 import { getTool } from '../data/toolsData';
+import useSEO from '../hooks/useSEO';
 
 export default function ToolPage() {
   const { slug } = useParams();
   const tool = getTool(slug);
 
-  useEffect(() => {
-    if (tool) {
-      document.title = `${tool.title} | DoAide Certificate`;
-      const meta = document.querySelector('meta[name="description"]');
-      if (meta) meta.setAttribute('content', tool.description);
-    }
-  }, [tool]);
+  useSEO(`/tools/${slug}`);
 
   if (!tool) {
     return (
@@ -32,39 +26,9 @@ export default function ToolPage() {
     );
   }
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'WebApplication',
-    name: tool.shortTitle,
-    url: `https://certificate.doaide.com/tools/${tool.slug}`,
-    description: tool.description,
-    applicationCategory: 'DesignApplication',
-    operatingSystem: 'Any',
-    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-    author: { '@type': 'Organization', name: 'DoAide', url: 'https://doaide.com' },
-  };
-
-  const faqJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: tool.faqs.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
-  };
-
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
 
       {/* Hero */}
       <section className="bg-gradient-to-br from-da-dark to-gray-900 text-white py-12">
